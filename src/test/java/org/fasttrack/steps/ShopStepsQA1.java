@@ -1,7 +1,6 @@
 package org.fasttrack.steps;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrack.pages.HomePageQA1;
 import org.fasttrack.pages.ShopPageQA1;
 
 public class ShopStepsQA1 {
@@ -22,43 +21,41 @@ public class ShopStepsQA1 {
     }
 
     @Step
-    public void selectQtyForLogoCollection() {
+    public void selectQtyForLogoCollection(String QtyHoodieWithLogo) {
         ShopPageQA1.open();
         ShopPageQA1.clickShopButton();
         ShopPageQA1.clickLogoCollectionProduct();
-        ShopPageQA1.selectQtyHoodieWithLogo();
+        ShopPageQA1.selectQtyHoodieWithLogo(QtyHoodieWithLogo);
     }
 
     @Step
-    public void selectQtyForTshirtFromLogoCollection() {
+    public void selectQtyForTshirtFromLogoCollection(String QtyTshirt) {
         ShopPageQA1.open();
         ShopPageQA1.clickShopButton();
         ShopPageQA1.clickLogoCollectionProduct();
-        ShopPageQA1.selectQtyTshirt();
+        ShopPageQA1.selectQtyTshirt(QtyTshirt);
     }
 
     @Step
-    public void selectQtyForBeanieFromLogoCollection() {
+    public void selectQtyForBeanieFromLogoCollection(String QtyBeanie) {
         ShopPageQA1.open();
         ShopPageQA1.clickShopButton();
         ShopPageQA1.clickLogoCollectionProduct();
-        ShopPageQA1.selectQtyBeanie();
+        ShopPageQA1.selectQtyBeanie(QtyBeanie);
+
     }
 
     @Step
-    public void addToCartButton() {
+    public void addToCartButton(String QtyHoodieWithLogo, String QtyTshirt, String QtyBeanie) {
         ShopPageQA1.open();
         ShopPageQA1.clickShopButton();
         ShopPageQA1.clickLogoCollectionProduct();
-        ShopPageQA1.selectQtyHoodieWithLogo();
-        ShopPageQA1.selectQtyTshirt();
-        ShopPageQA1.selectQtyBeanie();
-        ShopPageQA1.clickAddToCartButon();
+        ShopPageQA1.selectQtyHoodieWithLogo(QtyHoodieWithLogo);
+        ShopPageQA1.selectQtyTshirt(QtyTshirt);
+        ShopPageQA1.selectQtyBeanie(QtyBeanie);
+        ShopPageQA1.clickAddToCartButton();
 
     }
-
-
-
 
 
 

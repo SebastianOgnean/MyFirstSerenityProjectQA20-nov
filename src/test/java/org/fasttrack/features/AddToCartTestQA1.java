@@ -3,6 +3,7 @@ package org.fasttrack.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrack.steps.CartStepsQA1;
 import org.fasttrack.steps.ShopStepsQA1;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,16 +18,19 @@ public class AddToCartTestQA1 {
     @Steps
     private ShopStepsQA1 shopStepsQA1;
 
+    @Steps
+    private CartStepsQA1 cartStepsQA1;
+
     @Test
-    public void addToCartButton(){
-        shopStepsQA1.navigateToShopPage();
-        shopStepsQA1.clickLogoCollection();
-        shopStepsQA1.selectQtyForLogoCollection();
-        shopStepsQA1.selectQtyForTshirtFromLogoCollection();
-        shopStepsQA1.selectQtyForBeanieFromLogoCollection();
-        shopStepsQA1.addToCartButton();
+    public void addToCartButton() {
+        shopStepsQA1.addToCartButton("1","2","3");
     }
 
+    @Test
+    public void updateCartButton() {
+        shopStepsQA1.addToCartButton("5","6","7");
+        cartStepsQA1.CartButton();
+    }
 
 
 

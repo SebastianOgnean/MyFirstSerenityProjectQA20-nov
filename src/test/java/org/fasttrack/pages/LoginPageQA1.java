@@ -26,8 +26,7 @@ public class LoginPageQA1 extends PageObject {
 
 
     public void setEmailField(String email){
-        typeInto(emailField, email);
-    }
+        typeInto(emailField, email); }
 
     public void setPasswordField(String password){
         typeInto(passwordField, password);
@@ -38,10 +37,12 @@ public class LoginPageQA1 extends PageObject {
         clickOn(loginButton);
     }
 
-    public void verifyErrorMessage(){ errorMessage.shouldContainOnlyText("ERROR: Invalid email address. Lost your password?");
+    public void verifyErrorMessage(){
+        errorMessage.shouldContainOnlyText("ERROR: Invalid email address. Lost your password?");
     }
 
-    public void verifyErrorMessageForPass(){ errorMessageForPass.shouldContainOnlyText("ERROR: The password you entered for the email address sebastian.ognean@yahoo.com is incorrect. Lost your password?");
+    public void verifyErrorMessageForPass(){
+        errorMessageForPass.shouldContainOnlyText("ERROR: The password you entered for the email address sebastian.ognean@yahoo.com is incorrect. Lost your password?");
     }
 
 }

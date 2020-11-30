@@ -15,6 +15,7 @@ public class RegisterStepsQA1 {
         homePage.clickAccountButton();
         homePage.clickRegisterLink();
     }
+
     @Step
     public void enterCredentials(String email, String password){
         myAccountPageQA1.setEmailField(email);
@@ -22,11 +23,13 @@ public class RegisterStepsQA1 {
     }
 
     @Step
-    public void clickRegister(){ myAccountPageQA1.clickRegister();
+    public void clickRegister(){
+        myAccountPageQA1.clickRegister();
     }
 
     @Step
-    public void verifyIfUserIsRegistered(String userName){ myAccountPageQA1.verifyUserIsRegistered(userName);
+    public void verifyUserIsRegistered(String userName){
+        myAccountPageQA1.verifyUserIsRegistered(userName);
     }
 
 

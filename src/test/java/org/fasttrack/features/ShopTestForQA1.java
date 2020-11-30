@@ -23,31 +23,23 @@ public class ShopTestForQA1 {
 
     @Test
     public void SelectProductLogoCollection(){
-        shopStepsQA1.navigateToShopPage();
         shopStepsQA1.clickLogoCollection();
     }
 
     @Test
     public void selectQtyForHoodieLogoCollection(){
-        shopStepsQA1.navigateToShopPage();
-        //shopStepsQA1.clickLogoCollection();
-        shopStepsQA1.selectQtyForLogoCollection();
+        shopStepsQA1.selectQtyForLogoCollection("3");
     }
 
     @Test
     public void selectQtyForTshirtFromLogoCollection(){
-        shopStepsQA1.navigateToShopPage();
-        shopStepsQA1.clickLogoCollection();
-        shopStepsQA1.selectQtyForTshirtFromLogoCollection();
+        shopStepsQA1.selectQtyForTshirtFromLogoCollection("2");
     }
 
    @Test
     public void selectQtyForBeanieFromLogoCollection(){
-        shopStepsQA1.navigateToShopPage();
-        shopStepsQA1.clickLogoCollection();
-        shopStepsQA1.selectQtyForBeanieFromLogoCollection();
+        shopStepsQA1.selectQtyForBeanieFromLogoCollection("3");
     }
-
 
 
 

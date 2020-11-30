@@ -9,7 +9,7 @@ import net.thucydides.core.pages.PageObject;
 
 public class MyAccountPageQA1 extends PageObject {
 
-    @FindBy(id ="reg_email")
+    @FindBy(id = "reg_email")
     private WebElementFacade emailField;
 
     @FindBy(id = "reg_password")
@@ -31,9 +31,8 @@ public class MyAccountPageQA1 extends PageObject {
         typeInto(passwordField, password);
     }
 
-    public void clickRegister(){ clickOn(registerButton);
-    }
-
+    public void clickRegister(){
+        clickOn(registerButton); }
 
     public void verifyUserIsRegistered(String userName){
         welcomeMessage.shouldContainText("Hello, "+userName+"!");
@@ -42,7 +41,6 @@ public class MyAccountPageQA1 extends PageObject {
     public void verifyLoggedIn(String userName){
         welcomeMessage.shouldContainText("Hello, "+userName+"!");
     }
-
 
 
 

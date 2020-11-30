@@ -15,13 +15,13 @@ public class ShopPageQA1 extends PageObject {
     @FindBy(css = "#main > ul > li.post-31.product.type-product.status-publish.has-post-thumbnail.product_cat-clothing.clearfix.instock.sale.shipping-taxable.product-type-grouped > a.woocommerce-LoopProduct-link.woocommerce-loop-product__link > h2")
     private WebElementFacade LogoCollection;
 
-    @FindBy(css = "#quantity_5fa66999b9236")
+    @FindBy(css = "tr.product:nth-of-type(1) td.woocommerce-grouped-product-list-item__quantity input")
     private WebElementFacade QtyHoodieWithLogo;
 
-    @FindBy(css = "#quantity_5fa67a2368518")
+    @FindBy(css = "tr.product:nth-of-type(2) td.woocommerce-grouped-product-list-item__quantity input")
     private WebElementFacade QtyTshirt;
 
-    @FindBy(css = "#quantity_5fa67a2369b7c")
+    @FindBy(css = "tr.product:nth-of-type(3) td.woocommerce-grouped-product-list-item__quantity input")
     private WebElementFacade QtyBeanie;
 
     @FindBy(css = "#product-31 > div.summary.entry-summary > form > button")
@@ -39,28 +39,27 @@ public class ShopPageQA1 extends PageObject {
         clickOn(LogoCollection);
     }
 
-    public void selectQtyHoodieWithLogo() {
-        waitFor(QtyHoodieWithLogo);
-        clickOn(QtyHoodieWithLogo);
+    public void selectQtyHoodieWithLogo(String number) {
+       typeInto(QtyHoodieWithLogo, number);
     }
 
-    public void selectQtyTshirt() {
-        waitFor(QtyTshirt);
-        clickOn(QtyTshirt);
+    public void selectQtyTshirt(String number) {
+        typeInto(QtyTshirt, number);
     }
 
-    public void selectQtyBeanie() {
-        waitFor(QtyBeanie);
-        clickOn(QtyBeanie);
+    public void selectQtyBeanie(String number) {
+        typeInto(QtyBeanie, number);
     }
 
-    public void clickAddToCartButon() {
+    public void clickAddToCartButton() {
         waitFor(AddToCartButton);
         clickOn(AddToCartButton);
     }
 
 
 
-
-
 }
+
+
+
+

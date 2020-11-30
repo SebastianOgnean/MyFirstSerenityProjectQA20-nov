@@ -9,6 +9,7 @@ public class LoginStepsQA1 {
     private HomePageQA1 homePage;
     private MyAccountPageQA1 myAccountPageQA1;
     private LoginPageQA1 loginPageQA1;
+
     @Step
     public void navigateToLoginPageQA1() {
         homePage.open();
@@ -22,7 +23,8 @@ public class LoginStepsQA1 {
     }
 
     @Step
-    public void clickLoginButton(){ loginPageQA1.clickLogIn();
+    public void clickLoginButton(){
+        loginPageQA1.clickLogIn();
     }
 
     @Step
@@ -30,7 +32,7 @@ public class LoginStepsQA1 {
         myAccountPageQA1.verifyLoggedIn(userName);
     }
 
-   @Step
+    @Step
     public void verifyUserIsNotLoggedIn(){
         loginPageQA1.verifyErrorMessage();
     }
@@ -40,12 +42,7 @@ public class LoginStepsQA1 {
         loginPageQA1.verifyErrorMessageForPass();
     }
 
-    //@Step
-    public void logIn(String user, String pass){
-        navigateToLoginPageQA1();
-        enterCredentials(user,pass);
-        clickLoginButton();
-    }
+
 
 
 
